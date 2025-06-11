@@ -25,7 +25,7 @@ const uploadFile = async (req, res) => {
 const shareFile = async (req, res) => {
   console.log(req.body);
   try {
-    const link = `http://localhost:8080/files/${req.body._id}`;
+    const link = `https://file-sharing-api-zyz9.onrender.com/files/${req.body._id}`;
     const file = await fileModel.findById(req.body._id);
     if (!file) {
       throw new Error("Invalid file Id");
